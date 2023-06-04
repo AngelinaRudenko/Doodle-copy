@@ -15,7 +15,13 @@ export const appReducer = createReducer(
     // ignore existing state
     return {
       ...state,
-      bookings: action.bookings
-    }
+      bookings: action.bookings,
+    };
+  }),
+  on(AppActions.deleteBooking, (state, action): AppState => {
+    return {
+      ...state,
+      bookings: [...state.bookings.slice(0, action.index), ...state.bookings.slice(action.index + 1)],
+    };
   })
 );

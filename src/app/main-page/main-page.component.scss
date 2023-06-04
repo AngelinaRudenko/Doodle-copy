@@ -10,6 +10,15 @@ $light-blue: #223fe6;
     margin-bottom: 1rem;
     border-radius: 1rem;
     word-break: break-word;
+
+    .first-row {
+      display: flex;
+      justify-content: space-between;
+
+      .delete {
+        cursor: pointer;
+      }
+    }
   }
 }
 

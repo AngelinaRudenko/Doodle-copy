@@ -6,9 +6,22 @@
         <button routerLink="/booking-details-form" type="button">Create time booking</button>
       </div>
     </div>
-    <div *ngFor="let booking of bookings">
+    <div *ngFor="let booking of bookings; index as i;">
       <section class="booking-block">
-        <h2>{{ booking.title }}</h2>
+        <div class="first-row">
+          <h2>{{ booking.title }}</h2>
+          <div class="delete" (click)="delete(i)">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" height="24" width="24" class="delete-icon">
+              <path d="M3 6L5 6L21 6" />
+              <path d="M8 6L8 3L16 3L16 6" />
+              <path d="M10 11V18" />
+              <path d="M14 11V18" />
+              <path d="M3 6L3 21C3 21.5304 3.21071 22.0391 3.58579 22.4142C3.96086 22.7893 4.46957 23 5 23H19C19.5304 23 20.0391 22.7893 20.4142 22.4142C20.7893 22.0391 21 21.5304 21 21V6L21 6L21 6L3 6Z" />
+              <path d="M16 3L8 3L8 3L8 3L8 3L8 3L8 3L8 3L8 6L16 6" />
+              <path d="M16 3L16 6L16 6L16 6L16 6L16 6L16 6L16 6L16 3Z" />
+            </svg>
+          </div>
+        </div>
         <p>{{ booking.description }}</p>
         <p><b>Location</b> {{ booking.location }}</p>
         <p><b>Dates</b> {{ booking.dateFrom | date }} - {{ booking.dateTo | date }}</p>

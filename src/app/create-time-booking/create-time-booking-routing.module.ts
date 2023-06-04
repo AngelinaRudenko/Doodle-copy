@@ -5,7 +5,7 @@ import { BookingDetailsFormComponent } from './booking-details-form/booking-deta
 import { BookingSubmissionFormComponent } from './booking-submission-form/booking-submission-form.component';
 
 const routes: Routes = [
-  { path: "booking-details-form", component: BookingDetailsFormComponent},
+  { path: "booking-details-form", component: BookingDetailsFormComponent },
   { path: 'booking-time-form', component: BookingTimeFormComponent },
   { path: 'booking-submission-form', component: BookingSubmissionFormComponent },
 ];
