@@ -1,0 +1,21 @@
+<div id="bookingsContent">
+  <div class="timeBookings">
+    <div class="head">
+      <h1>My bookings</h1>
+      <div class="actions">
+        <button routerLink="/booking-details-form" type="button">Create time booking</button>
+      </div>
+    </div>
+    <div *ngFor="let booking of bookings">
+      <section class="booking-block">
+        <h2>{{ booking.title }}</h2>
+        <p>{{ booking.description }}</p>
+        <p><b>Location</b> {{ booking.location }}</p>
+        <p><b>Dates</b> {{ booking.dateFrom | date }} - {{ booking.dateTo | date }}</p>
+        <p><b>Time</b> {{ booking.timeFrom }} - {{ booking.timeTo }}</p>
+      </section>
+    </div>
+    <p *ngIf="bookings.length == 0">There is no bookings yet</p>
+  </div>
+
+</div>

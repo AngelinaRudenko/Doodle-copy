@@ -1,0 +1,12 @@
+<h1>Save booking?</h1>
+<section class="draft">
+  <p><b>Title</b> {{ draft.title }}</p>
+  <p><b>Description</b> {{ draft.description }}</p>
+  <p><b>Location</b> {{ draft.location }}</p>
+  <p><b>Dates</b> {{ draft.dateFrom | date }} - {{ draft.dateTo | date }}</p>
+  <p><b>Time</b> {{ draft.timeFrom }} - {{ draft.timeTo }}</p>
+</section>
+<div class="action-buttons">
+  <button routerLink="/">Cancel</button>
+  <button (click)="save()">Submit</button>
+</div>

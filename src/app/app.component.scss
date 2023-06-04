@@ -1,0 +1,28 @@
+$header-background: #dce1ff;
+$header-text-color: #223fe6;
+
+header {
+  display: flex;
+  align-items: center;
+  background-color: $header-background;
+  padding: 1vh;
+  height: 5vh;
+  font-size: 1rem;
+  color: $header-text-color;
+
+  nav a {
+    display: flex;
+    align-items: center;
+    padding: 0 2vw;
+
+    h1 {
+      font-size: 1.2rem;
+      margin: 0 1rem;
+      color: $header-text-color;
+    }
+  }
+}
+
+main {
+  margin: 2vh 10vw;
+}

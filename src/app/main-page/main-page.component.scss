@@ -1,0 +1,33 @@
+$light: rgb(243, 245, 255);
+$light-purple: #dce1ff;
+$dark-blue: #142896;
+$light-blue: #223fe6;
+
+#bookingsContent {
+  .booking-block {
+    background-color: $light-purple;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    word-break: break-word;
+  }
+}
+
+// Mobile styles
+@media (max-width: 767px) {
+  #bookingsContent {
+    .head {
+      margin: 2vh 0;
+    }
+  }
+}
+
+// Desktop styles
+@media (min-width: 768px) {
+  #bookingsContent {
+    .head {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

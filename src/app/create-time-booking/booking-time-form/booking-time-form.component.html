@@ -1,0 +1,20 @@
+<h1>Booking time</h1>
+<div id="form" [formGroup]="form">
+  <div class="form-row">
+    <label for="dateFrom" class="form-label required">Start Date</label>
+    <input type="date" class="form-control" id="dateFrom" formControlName="dateFrom" [ngClass]="{ invalid: getField('dateFrom').invalid }">
+  </div>
+  <div class="form-row">
+    <label for="dateTo" class="form-label required">End Date</label>
+    <input type="date" class="form-control" id="dateTo" formControlName="dateTo" [ngClass]="{ invalid: getField('dateTo').invalid }">
+  </div>
+  <div class="form-row">
+    <label for="timeFrom" class="form-label required">Start time</label>
+    <input type="time" class="form-control" id="timeFrom" formControlName="timeFrom" [ngClass]="{ invalid: getField('timeFrom').invalid }">
+  </div>
+  <div class="form-row">
+    <label for="timeTo" class="form-label required">End time</label>
+    <input type="time" class="form-control" id="timeTo" formControlName="timeTo" [ngClass]="{ invalid: getField('timeTo').invalid }">
+  </div>
+</div>
+<button (click)="continue()" [disabled]="form.invalid">Continue</button>

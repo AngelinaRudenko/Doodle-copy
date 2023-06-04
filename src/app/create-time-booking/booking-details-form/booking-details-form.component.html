@@ -1,0 +1,16 @@
+<h1>Booking details</h1>
+<div id="form" [formGroup]="form">
+  <div class="form-row">
+    <label for="title" class="form-label required">Title</label>
+    <input type="text" class="form-control" id="title" placeholder="Call" formControlName="title" [ngClass]="{ invalid: getField('title').invalid }">
+  </div>
+  <div class="form-row">
+    <label for="location" class="form-label">Location</label>
+    <input type="text" class="form-control" id="location" placeholder="office 305" formControlName="location" [ngClass]="{ invalid: getField('description').invalid }">
+  </div>
+  <div class="form-row">
+    <label for="description" class="form-label">Description</label>
+    <textarea class="form-control" id="description" placeholder="Topic of the call" formControlName="description" [ngClass]="{ invalid: getField('description').invalid }"></textarea>
+  </div>
+</div>
+<button (click)="continue()" [disabled]="form.invalid">Continue</button>
