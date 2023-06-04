@@ -8,7 +8,7 @@ export const saveBooking = createAction(
 
 export const deleteBooking = createAction(
   '[BOOKINGS] Delete booking',
-  props<{ booking: Booking }>()
+  props<{ index: number }>()
 );
 
 export const loadStateFromLocalStorage = createAction(

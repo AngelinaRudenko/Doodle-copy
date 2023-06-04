@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { AppState } from '../state/app.state';
+import * as AppActions from '../state/app.actions';
 import { getBookings } from '../state/app.selectors';
 import { Booking } from '../state/booking';
 import { LocalStorageSyncService } from 'src/services/localstorage-sync.service';
@@ -33,5 +34,11 @@ export class MainPageComponent extends UnsubscribingComponent implements OnInit 
           this.bookings = bookings;
         }
       });
+  }
+
+  delete(index: number): void {
+    this.store.dispatch(AppActions.deleteBooking({
+      index: index
+    }))
   }
 }
